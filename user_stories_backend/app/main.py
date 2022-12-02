@@ -13,9 +13,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(project.router)
-
 
 @app.get("/")
 def app_is_running():
     return {"message": "The app is running"}
+
+
+app.include_router(project.router)
